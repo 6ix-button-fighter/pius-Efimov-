@@ -1,0 +1,46 @@
+<?php
+class user extends comment
+{
+    public int $id;
+    public string $name;
+    public string $email;
+    public string $pass;
+    public string $message;
+ 
+    public function __construct($id, $name, $email, $pass, $message)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->email = $email;
+        $this->pass = $pass;
+        $this->mess = $message;
+    }
+ 
+    public function validate()
+    {
+        //if валидация
+        return true;  //или false
+    }
+ 
+    public function getTime()
+    {
+        if ($this->validate()) {
+            return date("m.d.Y H:i:s", time());
+        }
+    }
+ 
+}
+
+
+class comment
+{
+public string $message;
+public function __construct($message)
+	{
+ 	$this->usr = new user;
+	}
+}
+ 
+ 
+var_dump($var = new user(1, 'Vadim', 'name@mail.ru', '5434', 'Hello, wassap'));
+var_dump($var->getTime());
