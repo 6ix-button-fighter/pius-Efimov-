@@ -1,7 +1,7 @@
 server {
 listen 80;
-server_name uXXXXXX-lab2.local;
-root /home/miet/apps/uXXXXXX-lab2/public;
+server_name u8201937-lab2.local;
+root /home/miet/apps/u8201937-lab2/public;
 location / {
 try_files $uri /index.php?$query_string;
 }
